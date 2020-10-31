@@ -18,8 +18,11 @@ public void walk(){
 	}
 public Cat(){
 		}
-public Cat(String nickname){
-	
+public Cat(String nickname, int age){
+	this.nickname=nickname;
+	this.age=age;
 	}
 }
+
+
 
