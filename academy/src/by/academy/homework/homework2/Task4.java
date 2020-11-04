@@ -8,10 +8,10 @@ public class Task4 {
 	for (int a = 1;; a++) {
 		s = (int) Math.pow(2,a);
 		if (s >= 1000000) break;
-		System.out.println (s);
+		System.out.println (a);
 		
 	}
-		
+	
 	
 	}
 }
