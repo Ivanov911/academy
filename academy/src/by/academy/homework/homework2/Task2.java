@@ -7,36 +7,36 @@ public class Task2 {
 	public static void main(String[] args) {
 			
 		String type;
-		int Int1;
-		double Double1;
-		float Float1;
-		char Char1;
-		String String1;
+		String value;
 		
 		Scanner sc = new Scanner(System.in);	
 		System.out.println("¬ведите тип данных: int, double, float, char или String: ");
 		    type = sc.nextLine();
-		    sc.close();
-	    Scanner sc1 = new Scanner(System.in);	    
+		Scanner sc1 = new Scanner(System.in);	    
 		System.out.println("¬ведите значение:");
-		if (type=="int")	{
-			Int1 = sc1.nextInt();}
-	    if (type=="double")	{
-			Double1 = sc1.nextDouble();}
-	    if (type=="float")	{
-			Float1 = sc1.nextFloat();}
-	    //if (type=="char")	{
-			//Char1 = sc.nextLine();}
-	    if (type=="String")	{
-			String1 = sc1.nextLine();}
-			sc1.close();
-			
+		    value = sc1.nextLine();
+		    sc1.close();
+		    
 		switch (type) {
-        case "int": System.out.println(Int1%2);break;
-        case "double": System.out.println(Double1*0.7);break;
-        case "float": System.out.println(Float1);break;
-        //case "char": System.out.println((int)Char1);break;
-        case "String": System.out.println("Hello"+String1);break;
+        case "int": 
+        	int int1 = Integer.parseInt(value);
+        	System.out.println(int1%2);
+        	break;
+        case "double": 
+        	double double1 = Double.parseDouble(value);
+        	System.out.println(double1*0.7);
+        	break;
+        case "float": 
+        	float float1 = Float.parseFloat(value);
+        	System.out.println(float1*float1);
+        	break;
+        case "char": 
+        	char char1 = (char)value.charAt(0);
+        	System.out.println((int)char1);
+        	break;
+        case "String": 
+        	System.out.println("Hello"+value);
+        	break;
         default: System.out.println("Unsupported Type");
         }
 	}
