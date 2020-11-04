@@ -27,7 +27,7 @@ public Cat(String nickname){
 	this.age=3;
 	this.nickname=nickname;
 		}
-public void setMoney(int money){
+public void Cost(int money){
 	this.money=money;
 }
 

@@ -19,6 +19,9 @@ public class Application {
 	
 	Cat2.setIsHomeAnimal("home");
 	System.out.println(Cat2.isHomeAnimal());
-		
+	Cat2.Cost(50);
+	Cat2.getMoney();
+	System.out.println(Cat2.getMoney());
 	}
+	
 	}
