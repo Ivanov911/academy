@@ -1,36 +1,30 @@
 package by.academy.homework.homework2;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Scanner;
 
 public class Task3 {
 
-	public class LessDiffLetters {
-	    static int diffLetters(String wrd) {
-	        Set<Character> chars = new HashSet<Character>();
-	        for ( char c : wrd.toCharArray() )
-	            chars.add(c);
-	        return chars.size();
-	    }
-	    
-	    public static void main(String[] args) {
-	        String[] strings = { "any many money more", "jingle bells jingle bells jingle all the way" };
-	        List<String> words = new ArrayList<String>();
-	        
-	        for ( String s: strings )
-	            words.addAll(Arrays.asList(s.split("\\s+")));
-	        
-	        Collections.sort(words, new Comparator<String>() {
-	            public int compare(String a, String b) {
-	                return diffLetters(a) - diffLetters(b);
-	            }
-	        });
-	        
-	        for ( String w: words )
-	            System.out.println(w);
-	    }
+	public static void main(String[] args) {
+		
+		
+		   String str1 = new String();
+		   System.out.println("Введите первое слово из четного числа букв:");
+		   Scanner input = new Scanner(System.in); 
+		   str1  = input.next();
+		  
+		   String str2 = new String();
+		   System.out.println("Введите второе слово из четного числа букв:");
+		   Scanner input2 = new Scanner(System.in); 
+		   str2  = input2.next();
+		   input.close();
+		   input2.close();
+		 
+	        System.out.println("Первое слово = " + str1);
+	        System.out.println("Второе слово = " + str2);
+	        String str3 = (str1.substring(0, str1.length()/2)) + 
+	                (str2.substring(str2.length()/2, str2.length()));
+	        System.out.println(str3);
+	  
 	}
+
+}
