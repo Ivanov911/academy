@@ -1,4 +1,4 @@
-package by.academy.homework.homework2;
+package by.academy.homework.homework1;
 
 
 public class Task4 {

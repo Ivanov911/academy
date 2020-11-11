@@ -3,42 +3,61 @@ package by.academy.homework.homework2;
 import java.util.Scanner;
 
 public class Task2 {
+	public static String correctInputString(String in) {
 
-	public static void main(String[] args) {
-			
-		String type;
-		String value;
-		
-		Scanner sc = new Scanner(System.in);	
-		System.out.println("Введите тип данных: int, double, float, char или String: ");
-		    type = sc.nextLine();
-		Scanner sc1 = new Scanner(System.in);	    
-		System.out.println("Введите значение:");
-		    value = sc1.nextLine();
-		    sc1.close();
-		    
-		switch (type) {
-        case "int": 
-        	int int1 = Integer.parseInt(value);
-        	System.out.println(int1%2);
-        	break;
-        case "double": 
-        	double double1 = Double.parseDouble(value);
-        	System.out.println(double1*0.7);
-        	break;
-        case "float": 
-        	float float1 = Float.parseFloat(value);
-        	System.out.println(float1*float1);
-        	break;
-        case "char": 
-        	char char1 = (char)value.charAt(0);
-        	System.out.println((int)char1);
-        	break;
-        case "String": 
-        	System.out.println("Hello"+value);
-        	break;
-        default: System.out.println("Unsupported Type");
+        //удаляем знаки препинания и лишние пробелы
+        in = in.replace(".", "");
+        in = in.replace(",", "");
+        in = in.replace(";", "");
+        in = in.replace(":", "");
+        in = in.replace("!", "");
+        in = in.replace("?", "");
+        in = in.replace(".", "");
+        in = in.replace("\"", "");
+        //можете дополнить список
+
+        in = in.replace("  ", " "); //удаляем лишние пробелы
+
+        in = in.replace(" - ", " ");  //удаляем тире
+
+        return in;
+    }
+
+    public static void findMinLengthAndOutput(String s) {
+
+        String[] words = s.split(" ");
+
+        int minLength = words[0].length(); //минимальная длина слова
+
+        for(String word : words) {
+            if(word.length() < minLength) {
+                minLength = word.length();
+            }
         }
-	}
 
+        for(String word : words) {
+            if(word.length() == minLength) {
+                System.out.println(word);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        String input = scan.nextLine();
+
+        System.out.println("Исходная строка: " + input);
+
+        input = correctInputString(input);
+
+        System.out.println("Обработанная строка: " + input);
+
+        System.out.println();
+        System.out.println("Слова минимальной длины:");
+        System.out.println();
+
+        findMinLengthAndOutput(input);
+    }
 }
