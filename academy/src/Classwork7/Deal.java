@@ -69,7 +69,7 @@ public class Deal {
 		for (Product product : products) {
 			double totalProductPrice = product.getPrice() * product.getQuantity();
 			summ += totalProductPrice;
-			System.out.println("Имя: " + product.getName() + " " + product.getPrice() + "X" + product.getQuantity()
+			System.out.println("Имя: " + product.getName() + " " + product.getPrice() + " X " + product.getQuantity()
 					+ "=" + totalProductPrice);
 		}
 		System.out.println("Сумма всей сделки " + summ);
