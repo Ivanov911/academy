@@ -1,89 +1,83 @@
 package Classwork7;
 
 public class Deal {
-Person seller;
-Person buyer;
-Product[] product;
 
+	String date;
+	Person seller;
+	Person buyer;
+	Product[] products;
 
+	public Deal() {
+		super();
+	}
 
-public Deal() {
-	super();
-	
+	public Deal(String date, Person seller, Person buyer, Product[] products) {
+		super();
+		this.date = date;
+		this.seller = seller;
+		this.buyer = buyer;
+		this.products = products;
+	}
 
-public Deal(Person seller, Person buyer, String product, double result) {
-	super();
-	this.seller = seller;
-	this.buyer = buyer;
-	this.product = product;
-	this.result = result;
-}
+	public String getDate() {
+		return date;
+	}
 
+	public void setDate(String date) {
+		this.date = date;
+	}
 
-public Person getSeller() {
-	return seller;
-}
+	public Person getSeller() {
+		return seller;
+	}
 
+	public void setSeller(Person seller) {
+		this.seller = seller;
+	}
 
-public void setSeller(Person seller) {
-	this.seller = seller;
-}
+	public Person getBuyer() {
+		return buyer;
+	}
 
-public Person getBuyer() {
-	return buyer;
-}
+	public void setBuyer(Person buyer) {
+		this.buyer = buyer;
+	}
 
-public void setBuyer(Person buyer) {
-	this.buyer = buyer;
-}
+	public Product[] getProducts() {
+		return products;
+	}
 
-public String getProduct() {
-	return product;
-}
+	public void setProducts(Product[] products) {
+		this.products = products;
+	}
 
-
-
-public void setProduct(String product) {
-	this.product = product;
-}
-
-
-
-public double getResult() {
-	return result;
-}
-
-
-
-public void setResult(double result) {
-	this.result = result;
-}
-
-public double result() {
-	double sum = 0;
-	for (Product product : product) {
-		sum += product.getPrice()*product.getQuantity();
+	public void result() {
+		double sum = 0;
+		for (Product product : products) {
+			sum += product.getPrice() * product.getQuantity();
+		}
 		if (sum > buyer.getCash()) {
-			System.out.println("Недостатчно средств");
-			
+			System.out.println("Недостаточно средств! ");
 		} else {
 			printBill();
 		}
-	return 0;
 	}
+
 	private void printBill() {
 		double summ = 0;
-		System.out.println("Cделка совершена");
+		System.out.println("Сделка совершена ");
 		for (Product product : products) {
-			double totalProductPrice = product.getPrice()*product.getQuantity();
-			System.out.println("Имя:" + product.getName() + " " + product.getQuantity() + "=" totalProductPrice);
-			
+			double totalProductPrice = product.getPrice() * product.getQuantity();
+			summ += totalProductPrice;
+			System.out.println("Имя: " + product.getName() + " " + product.getPrice() + "X" + product.getQuantity()
+					+ "=" + totalProductPrice);
 		}
+		System.out.println("Сумма всей сделки " + summ);
+		buyer.setCash(buyer.getCash() - summ);
+		seller.setCash(seller.getCash() + summ);
+		System.out.println("Деньги покупателя " + buyer.getCash());
+		System.out.println("Деньги продавца " + seller.getCash());
+
 	}
-	System.out.println("сумма всей сделки" + summ);
-	buyer.setCash(buyer.getCash() - summ);
-	seller.setCash(seller.getCash() = summ);
-	System.out.println("Деньги покупателя" + buyer.getCash());
-	System.out.println("Деньги продовца" + seller.getCash());
-}
+
 }
