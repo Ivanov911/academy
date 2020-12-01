@@ -16,13 +16,13 @@ public class BelarusianPhoneValidator implements Validator {
 
 	public static void main(String... args) {
 
-		System.out.println("Введите номер телефона в формате ХХХ-ХХХХХХХХХ:");
+		System.out.println("Р’Р’РµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° РІ С„РѕСЂРјР°С‚Рµ РҐРҐРҐ-РҐРҐРҐРҐРҐРҐРҐРҐРҐ :");
 		Scanner sc = new Scanner(System.in);
 		String str = sc.next();
 		
 		BelarusianPhoneValidator v = new BelarusianPhoneValidator();
 
-		System.out.println("Телефонный номер: " + str + " " + v.isValid(str));
+		System.out.println("РќРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°: " + str + " " + v.isValid(str));
 
 	}
 }

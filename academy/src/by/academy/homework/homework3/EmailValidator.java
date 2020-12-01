@@ -4,10 +4,12 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class EmailValidator {
+public class EmailValidator implements Validator {
 
-	private Pattern p = Pattern.compile("^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+.[a-z]{2,4}$");
+	private Pattern p = Pattern
+			.compile("^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+.[a-z]{2,4}$");
 
+	@Override
 	public boolean isValid(String s) {
 		Matcher m = p.matcher(s);
 		return m.find();
@@ -15,13 +17,13 @@ public class EmailValidator {
 
 	public static void main(String... args) {
 
-		System.out.println("Напишите почту:");
+		System.out.println("Р’Р’РµРґРёС‚Рµ РµРјР°Р№Р»:");
 		Scanner sc = new Scanner(System.in);
 		String str = sc.next();
-		
+
 		EmailValidator v = new EmailValidator();
 
-		System.out.println("Вы написали электронную почту: " + str + " " + v.isValid(str));
+		System.out.println("Р’Р’РµРґРµРЅРЅС‹Р№ РµРјР°Р№Р»: " + str + " " + v.isValid(str));
 
 	}
 }

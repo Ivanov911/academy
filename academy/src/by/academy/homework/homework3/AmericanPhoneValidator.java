@@ -4,9 +4,10 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class AmericanPhoneValidator {
+public class AmericanPhoneValidator implements Validator{
 	private Pattern p = Pattern.compile("(\\+*)1\\d{0}-\\d{10}$");
-	
+
+	 @Override
 	public boolean isValid(String s) {
 		Matcher m = p.matcher(s);
 		return m.find();
@@ -14,13 +15,13 @@ public class AmericanPhoneValidator {
 
 	public static void main(String... args) {
 
-		System.out.println("Введите номер телефона формате Х-ХХХХХХХХХХ:");
+		System.out.println("Р’Р’РµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° РІ С„РѕСЂРјР°С‚Рµ РҐ-РҐРҐРҐРҐРҐРҐРҐРҐРҐРҐ:");
 		Scanner sc = new Scanner(System.in);
 		String str = sc.next();
-		
+
 		AmericanPhoneValidator v = new AmericanPhoneValidator();
 
-		System.out.println("Телефонный номер: " + str + " " + v.isValid(str));
+		System.out.println("РќРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°: " + str + " " + v.isValid(str));
 
 	}
 

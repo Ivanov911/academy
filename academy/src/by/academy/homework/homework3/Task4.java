@@ -10,22 +10,24 @@ public class Task4 {
 	
 	    	
 	public static void main(String[] args) throws ParseException {
-		
+	
 	   String date = new String();
-  System.out.println("Введите дату");
+  System.out.println("Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ");
 	   Scanner input = new Scanner(System.in); 
 	   date  = input.next().replaceAll("\\D", "");
 	   input.close();
 	   
 	   Date sdf = new SimpleDateFormat("ddMMyyy").parse(date);
-	   
+   
 	   Calendar cal = Calendar.getInstance();
 	   cal.setTime(sdf);
 	    
-	   System.out.println("День: "+cal.get(Calendar.DAY_OF_MONTH));
-	   System.out.println("Месяц: "+(cal.get(Calendar.MONTH)+1));
-	   System.out.println("Год: "+cal.get(Calendar.YEAR));
+   System.out.println("Р”РµРЅСЊ: "+cal.get(Calendar.DAY_OF_MONTH));
+	   System.out.println("РњРµСЃСЏС†: "+(cal.get(Calendar.MONTH)+1));
+	   System.out.println("Р“РѕРґ: "+cal.get(Calendar.YEAR));
 	
 	   
 }
-	}
+}
+	
+	
