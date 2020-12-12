@@ -8,7 +8,7 @@ public class Task5 {
 
 	public static void main(String[] args) {
 		
-	 void buildDictionaryWithMap(String text){
+	 void static buildDictionaryWithMap(String text){
 		        text = text.toLowerCase();
 
 		        Map<Character, Integer> map = new HashMap<>();
