@@ -11,9 +11,7 @@ public class Task1 {
 
 	public static <T> Set<T> findDuplicates(Collection<T> collection) {
 		return new HashSet<>(collection);
-		//Set<T> elements = new HashSet<>();
-		//return collection.stream().filter(e -> elements.add(e)).collect(Collectors.toSet());
-		
+
 	}
 
 	public static void main(String[] args) {
@@ -37,10 +35,9 @@ public class Task1 {
 
 		System.out.println("Размер arrayList после добавления: " + arrayList.size());
 		System.out.println("Содержимое arrayList: " + arrayList);
-	
 
 		Set<String> duplicates = findDuplicates(arrayList);
-//		System.out.println("Дубликаты: " + duplicates);
+
 		System.out.println("Без дубликатов: " + duplicates);
 	}
 
