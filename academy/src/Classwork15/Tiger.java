@@ -1,20 +1,22 @@
 package Classwork15;
 
-public class Tiger {
-
+public class Tiger extends Cat {
+	
+	private int age;
 	public String name;
 	protected int lines;
-	private int age;
 	
-	public void run() {
+	@Zoo(number = "Z35F")
+	private void run() {
 		System.out.println("Тигр бежит");
-
 	}
-	public void eat() {
-		System.out.println("Тигр ест");
+	
+	private void eat(String s) {
+		System.out.println("Тигр ест " + s);
 	}
-		public void sleep() {
-			System.out.println("Тигр спит");
+	
+	protected void sleep() {
+		System.out.println("Тигр спит");
+	}
 
-}
 }
