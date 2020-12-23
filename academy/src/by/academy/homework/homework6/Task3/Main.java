@@ -18,7 +18,7 @@ public class Main {
 		users.add(new User("Захар", "Оверченков", 17));
 		users.add(new User("Оксана", "Бодалян", 18));
 		users.add(new User("Борис", "Волик", 19));
-		users.add(new User("Екатерина", "Гусева", 12));
+		users.add(new User("Екатерина", "Гусева", 20));
 
 		for (int i = 0; i < users.size(); i++) {
 			System.out.println("Имя: " + users.get(i).getName() + "\nФамилия: " + users.get(i).getSurname()
@@ -42,7 +42,6 @@ public class Main {
 
 				System.err.println(e.getMessage());
 			}
-
 		}
 	}
 }

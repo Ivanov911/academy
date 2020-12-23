@@ -17,10 +17,9 @@ public class Task2 {
 
 		char[] arr = new char[1024];
 		StringBuilder str = new StringBuilder();
-		int j = 0;
 		try (FileReader fr = new FileReader(src)) {
 
-			while ((j = fr.read(arr)) > 0) {
+			while ((fr.read(arr)) > 0) {
 				str.append(arr);
 			}
 			System.out.println("Программно считатанный файл с текстом:" + "\n" + str);
@@ -36,7 +35,7 @@ public class Task2 {
 			}
 
 			System.out.println("Записанный текст в файл:" + "\n" + wr.replaceAll("\\s+", ""));
-
+			fr.close();
 		}
 	}
 }
