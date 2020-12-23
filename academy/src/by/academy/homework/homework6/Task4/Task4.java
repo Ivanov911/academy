@@ -38,11 +38,56 @@ public class Task4 {
 	        String data = new String(byteArray);
 	        System.out.println("Число символов в тесте: "+data.length());
 	     
+	        
+	        
+	        
+	        
+	        
+	        
 	        int a = 0; // Начальное значение диапазона - "от"
 	        int b = data.length(); // Конечное значение диапазона - "до"
 	        
-	        int random = a + (int) (Math.random() * b); 
-	        System.out.println("Cлучайное число: " + random);	        
+//	        int random = a + (int) (Math.random() * b); 
+//	        System.out.println("Cлучайное число: " + random);	        
+//	        
+	        for (int i = 0; i < 100; i++) {
+		          int random = a + (int) (Math.random() * b); // создаем рандом
+		          String random_partw = data.substring(0, random);
+		          
+		          
+//	        
+	        
+	        
+		          
+		          
+		          
+		          
+		          
+		          
+		          
+		          
+	        
+//	        ileInputStream inFile = new FileInputStream(path_to_file);
+//	        byte[] str = new byte[inFile.available()];
+//	        inFile.read(str);
+//	        String text = new String(str);
+
+
+//	        for (int i = 0; i < 100; i++) {
+//	          int random = a + (int) (Math.random() * b); // создаем рандом
+//	          String random_part = text.substring(0, random);
+//	         
+	                try(FileWriter writer = new FileWriter(dir, (i + 1) + ".txt"))
+	                {
+	                    writer.write(random_part);                   
+	                    writer.flush();
+	                }
+	                catch(IOException ex){
+	                     
+	                    System.out.println(ex.getMessage());
+	                } 
+	            } 
+	        
 	        
 //	   
 //	        String [] data1 = new String(byteArray);
@@ -74,26 +119,26 @@ public class Task4 {
 //			String[] s = str.toString().split(" ");
 //			System.out.println(s.length);
 //			System.out.println(str.toString().length);
-			String[] words = str.toString().split(" ");
-			System.out.println(words.length);
-
-			int counter = 0;
-
-			for (int i = 0; i < 20; i++) {
-				File file = new File(dir, (i + 1) + ".txt");
-				if (!file.exists()) {
-					file.createNewFile();
-				}
-				try (FileWriter fw = new FileWriter(file)) {
-
-					fw.write(words[counter++] + " ");
-					fw.write(words[counter++] + " ");
-					fw.write(words[counter++] + " " + "\n\r");
-					LocalDateTime date = LocalDateTime.now();
-					fw.write(date.toString());
-				}
-
-			}
+//			String[] words = str.toString().split(" ");
+//			System.out.println(words.length);
+//
+//			int counter = 0;
+//
+//			for (int i = 0; i < 20; i++) {
+//				File file = new File(dir, (i + 1) + ".txt");
+//				if (!file.exists()) {
+//					file.createNewFile();
+//				}
+//				try (FileWriter fw = new FileWriter(file)) {
+//
+//					fw.write(words[counter++] + " ");
+//					fw.write(words[counter++] + " ");
+//					fw.write(words[counter++] + " " + "\n\r");
+//					LocalDateTime date = LocalDateTime.now();
+//					fw.write(date.toString());
+//				}
+//
+//			}
 		}
 
 	}
