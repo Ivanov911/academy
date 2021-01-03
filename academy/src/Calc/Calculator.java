@@ -23,8 +23,7 @@ public class Calculator {
 			System.out.println("�� �� ����� ���");
 			return 0;
 		}
-		return a.doubleValue() / b.doubleValue();
-		
+		return a.doubleValue() / b.doubleValue();		
 	}
 
 	public static <K extends Number, V extends Number> double subtraction(K a, V b) {
