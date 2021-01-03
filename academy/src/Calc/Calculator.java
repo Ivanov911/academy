@@ -4,7 +4,7 @@ public class Calculator {
 
 	public static <K extends Number, V extends Number> double sum(K a, V b) {
 		if (a == null && b == null) {
-			System.out.println("Мы не складываем НАЛ");
+			System.out.println("пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ");
 			return 0;
 		}
 		return a.doubleValue() + b.doubleValue();
@@ -12,7 +12,7 @@ public class Calculator {
 
 	public static <K extends Number, V extends Number> double multiply(K a, V b) {
 		if (a == null && b == null) {
-			System.out.println("Мы не умножаем НАЛ");
+			System.out.println("пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ");
 			return 0;
 		}
 		return a.doubleValue() * b.doubleValue();
@@ -20,15 +20,16 @@ public class Calculator {
 
 	public static <K extends Number, V extends Number> double divide(K a, V b) {
 		if (a == null && b == null) {
-			System.out.println("Мы не делим НАЛ");
+			System.out.println("пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ");
 			return 0;
 		}
 		return a.doubleValue() / b.doubleValue();
+		
 	}
 
 	public static <K extends Number, V extends Number> double subtraction(K a, V b) {
 		if (a == null && b == null) {
-			System.out.println("Мы не вычитаем НАЛ");
+			System.out.println("пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ");
 			return 0;
 		}
 		return a.doubleValue() - b.doubleValue();
